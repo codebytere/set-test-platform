@@ -1,0 +1,35 @@
+{
+  "name": "set-test-platform",
+  "version": "1.0.0",
+  "description": "Set the platform used for CI testing",
+  "main": "index.js",
+  "scripts": {
+    "create-dist": "ncc build index.js",
+    "lint": "prettier --check 'index.js'",
+    "format": "prettier --write 'index.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codebytere/set-test-platform.git"
+  },
+  "keywords": [
+    "electron",
+    "github",
+    "action",
+    "nodejs"
+  ],
+  "author": "Shelley Vohr <shelley.vohr@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codebytere/set-test-platform/issues"
+  },
+  "homepage": "https://github.com/codebytere/set-test-platformn#readme",
+  "devDependencies": {
+    "ncc": "^0.3.6",
+    "prettier": "^1.19.1"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "@actions/github": "^2.1.1"
+  }
+}
