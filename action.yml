@@ -1,0 +1,5 @@
+name: 'Set Testing Platform'
+description: 'Set the platform used for GitHub Actions CI testing'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

@@ -1,7 +1,7 @@
 {
   "name": "set-test-platform",
   "version": "1.0.0",
-  "description": "Set the platform used for CI testing",
+  "description": "Set the platform used for GitHub Actions CI testing",
   "main": "index.js",
   "scripts": {
     "create-dist": "ncc build index.js",
