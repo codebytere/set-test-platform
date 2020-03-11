@@ -10,16 +10,20 @@ const ACTIONS_OPTIONS = {
   linux: 'ubuntu-latest'
 }
 
-async function run() {
+function run() {
   try {
     const clientPayload = github.context.payload.client_payload
     const { platformInstallData } = clientPayload
 
     if (['win32-ia32', 'win32-x64'].includes(platformInstallData.platform)) {
       core.setOutput(PLATFORM, ACTIONS_OPTIONS.windows)
-    } else if (['darwin-x64', 'mas-x64'].includes(platformInstallData.platform)) {
+    } else if (
+      ['darwin-x64', 'mas-x64'].includes(platformInstallData.platform)
+    ) {
       core.setOutput(PLATFORM, ACTIONS_OPTIONS.macos)
-    } else if (['linux-ia32', 'linux-x64'].includes(platformInstallData.platform)) {
+    } else if (
+      ['linux-ia32', 'linux-x64'].includes(platformInstallData.platform)
+    ) {
       core.setOutput(PLATFORM, ACTIONS_OPTIONS.linux)
     } else {
       core.setFailed(`Unsupported platform: ${platformInstallData.platform}`)
